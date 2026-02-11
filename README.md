@@ -74,4 +74,10 @@ Bu proje otomatik olarak test edilir:
 
 
 ---
+
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://speeding-desert-261509.postman.co/workspace/ReqRes_Mini_Project~53b71a5e-f292-4066-bceb-ed5e7f4e25a8/collection/27535489-ba7bd1e3-2fcd-408f-b6ae-e130b0d8fe75?action=share&creator=27535489&active-environment=27535489-7eeafcf9-7aa1-4b21-9b98-dc79f618d572)
+
+
+
 👨‍💻 **Geliştiren:** [Tarık Karabaş](https://github.com/trkkrbs)
