@@ -70,6 +70,8 @@ Bu proje otomatik olarak test edilir:
 ## 📊 Rapor Örneği
 *(Buraya oluşturduğun HTML raporun bir ekran görüntüsünü eklersen çok daha profesyonel durur)*
 `![Report Screenshot](./path-to-your-image.png)`
+<img width="1105" height="702" alt="Screenshot 2026-02-11 at 23 03 49" src="https://github.com/user-attachments/assets/860bbe8c-779a-482d-ab15-3b6e599ac461" />
+
 
 ---
 👨‍💻 **Geliştiren:** [Tarık Karabaş](https://github.com/trkkrbs)
