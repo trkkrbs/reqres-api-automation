@@ -1,86 +1,75 @@
-API Test Automation with Postman, Newman & GitHub Actions
-Project Overview
+# 🚀 ReqRes API Automation Project
 
-This project demonstrates API test automation using Postman.
-Tests are executed with Newman.
-GitHub Actions runs the tests automatically on a schedule.
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Newman](https://img.shields.io/badge/Newman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-Project Scope
+Bu proje, **ReqRes API** üzerinde uçtan uca test otomasyonu gerçekleştirmek amacıyla geliştirilmiştir. Testler **Postman** ile yazılmış, **Newman** ile koşturulmuş ve **GitHub Actions** ile CI/CD sürecine dahil edilmiştir.
 
-The project uses the ReqRes API and covers a full user flow:
+---
 
-Login (extract token)
+## 🎯 Proje Kapsamı (Test Senaryoları)
 
-Create User (extract ID)
+Proje, gerçek bir kullanıcı akışını simüle eden aşağıdaki API uç noktalarını kapsar:
 
-Get User List
+* 🔑 **Login:** Token çıkarımı yapılır.
+* 👤 **Create User:** Yeni kullanıcı oluşturulur ve ID saklanır.
+* 📋 **Get User List:** Kullanıcı listesi doğrulanır.
+* 🔍 **Get Single User:** Belirli bir kullanıcı detayları kontrol edilir.
+* 🔄 **Update User:** Kullanıcı bilgileri güncellenir.
+* 🗑️ **Delete User:** Kullanıcı silme işlemi test edilir.
 
-Get Single User
+---
 
-Update User
+## 🛠️ Kullanılan Teknolojiler
 
-Delete User
+| Araç | Açıklama |
+| :--- | :--- |
+| **Postman** | API isteklerinin oluşturulması ve test scriptlerinin yazımı. |
+| **Newman** | Postman koleksiyonlarını terminal üzerinden çalıştırmak için. |
+| **Newman HTML Extra** | Detaylı ve görsel test raporları üretmek için. |
+| **GitHub Actions** | Otomatik test çalıştırma (CI) ve zamanlanmış (Cron) görevler. |
+| **Node.js** | Çalışma ortamı. |
 
-Technologies
+---
 
-Postman
+## 🚀 Yerel Çalıştırma (Local Run)
 
-Newman
+Projeyi kendi bilgisayarınızda çalıştırmak için:
 
-Newman HTML Extra Reporter
+1.  **Repoyu klonlayın:**
+    ```bash
+    git clone [https://github.com/trkkrbs/reqres-api-automation.git](https://github.com/trkkrbs/reqres-api-automation.git)
+    ```
+2.  **Bağımlılıkları yükleyin:**
+    ```bash
+    npm install
+    ```
+3.  **Testleri koşturun:**
+    ```bash
+    newman run collection.json -e environment.json -r htmlextra
+    ```
+    *Raporlar `reports` klasörü altında oluşturulacaktır.*
 
-GitHub Actions
+---
 
-Cron
+## ⚙️ CI/CD & GitHub Actions
 
-Local Run
+Bu proje otomatik olarak test edilir:
+- **Zamanlanmış (Cron):** Her Pazartesi otomatik çalışır.
+- **Manuel:** GitHub üzerinden "Run workflow" butonu ile tetiklenebilir.
 
-Runs the collection
+### Raporlara Nasıl Erişilir?
+1. GitHub'da **Actions** sekmesine gidin.
+2. En son başarılı olan **workflow run**'a tıklayın.
+3. **Artifacts** bölümünden `newman-report` dosyasını indirin.
 
-Executes all tests
+---
 
-Generates an HTML report
+## 📊 Rapor Örneği
+*(Buraya oluşturduğun HTML raporun bir ekran görüntüsünü eklersen çok daha profesyonel durur)*
+`![Report Screenshot](./path-to-your-image.png)`
 
-Saves the report in the reports folder
-
-CI/CD (GitHub Actions)
-
-Installs Node.js
-
-Installs Newman
-
-Runs the collection
-
-Generates an HTML report
-
-Uploads the report as an artifact
-
-Workflow Schedule
-
-Runs every Monday
-
-Can run manually (Run workflow button)
-
-Reports
-
-Reports are generated automatically
-
-Download from:
-
-Actions
-
-Select workflow run
-
-Open Artifacts
-
-Download newman-report
-
-Purpose
-
-Practice API automation
-
-Demonstrate CI/CD integration
-
-Run tests on schedule
-
-Generate HTML reports
+---
+👨‍💻 **Geliştiren:** [Tarık Karabaş](https://github.com/trkkrbs)
