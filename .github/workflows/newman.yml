@@ -1,0 +1,36 @@
+name: Weekly Newman Run
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Her Pazartesi 06:00 UTC
+  workflow_dispatch:       # Manuel çalıştırma için
+
+jobs:
+  run-newman:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Newman
+        run: npm install -g newman newman-reporter-htmlextra
+
+      - name: Run Collection
+        run: |
+          mkdir -p reports
+          newman run UserFlow.postman_collection.json \
+            -e ReqRes.postman_environment.json \
+            -r cli,htmlextra \
+            --reporter-htmlextra-export reports/report.html
+
+      - name: Upload Report Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: newman-report
+          path: reports/report.html
